@@ -20,9 +20,12 @@ const RatingsPill = () => {
             onChange={handleInputChange}
             className="hidden"
           />
+          {/* Make it to where if the sex of the person that you're rating influences
+           the color of the background of the button when selected. If male, blue. If 
+           female, pink */}
           <span
-            className={`rounded-full font-medium text-[20px] h-[32px] w-[32px] justify-center items-center flex cursor-pointer ${
-              selectedValue === number.toString() ? "bg-blue text-white" : ""
+            className={`rounded-full font-medium text-[20px] h-[32px] w-[32px] justify-center items-center flex cursor-pointer hover:border transition-all ${
+              selectedValue === number.toString() ? "bg-pink text-white" : ""
             }`}
           >
             {number}
