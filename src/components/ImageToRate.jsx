@@ -1,5 +1,6 @@
 import React from "react";
 import Tag from "./Tag";
+import RatingsPill from "./RatingsPill";
 
 let rating = 47;
 
@@ -9,7 +10,7 @@ const ImageToRate = () => {
       <div>
         <Tag ratings={rating} />
       </div>
-      ImageToRate
+      <RatingsPill />
     </div>
   );
 };
