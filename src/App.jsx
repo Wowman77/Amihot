@@ -14,7 +14,7 @@ import {
 } from "./components/index";
 
 // Sets the logged in status to true or false to optinally dispaly the right elements
-const LoggedInStatus = true;
+const LoggedInStatus = false;
 
 function App() {
   return (
