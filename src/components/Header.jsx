@@ -3,6 +3,7 @@ import { menu, close, logo } from "../assets";
 import { GirlsRate, GuysRate, IconButton } from "./index.jsx";
 import { home, leaderboards, ratings } from "../assets";
 import { Link } from "react-router-dom";
+import { users } from "./users";
 
 const Header = (props) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,13 +24,18 @@ const Header = (props) => {
   // Add logged in version of the header **WIP**
   return (
     <header>
-      <div className=" xl:max-w-[1280px] mx-auto px-4 py-4 md:py-6 flex justify-between items-center ">
+      <div className=" xl:max-w-[1280px] mx-auto px-4 py-3 flex justify-between items-center ">
         <Link to="/">
           <img src={logo} alt="Close" className="w-[65px] h-[20px]" />
         </Link>
         <nav className="flex items-center">
-          <div className="hidden md:flex space-x-4">
-            <img src="" className="rounded-full"></img>
+          {/* Top right section of navbar */}
+          <div className="hidden md:flex space-x-4 items-center">
+            <img
+              src={users[0].img}
+              className="rounded-full w-[40px] h-[40px] bg-slate-100 border  cursor-pointer "
+              alt="User Avatar"
+            ></img>
             <GirlsRate></GirlsRate>
             <GuysRate></GuysRate>
           </div>
